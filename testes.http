@@ -1,0 +1,82 @@
+GET http://localhost:2007
+
+###
+POST http://localhost:2007/insert
+Content-Type: application/json
+
+{
+    "name": "Julia da Silva ",
+    "age": 25,
+    "email": "juliass@gmail.com",
+    "password": "12345"
+}
+
+
+###
+
+POST  http://localhost:2007/access
+Content-Type: application/json
+
+{
+    "email": "arthurtavaressouto@gmail.com", 
+    "password":"Ike9885@"
+}
+
+
+### 
+
+PUT http://localhost:2007/update/2
+Content-Type: application/json
+
+{
+    "name": "Rafael Tavares Souto",
+    "age": 40,
+    "email": "rafaeltavarescontatos@gmail.com",
+    "password": "ike9885112220"
+}
+
+###
+
+DELETE http://localhost:2007/delete/4
+
+
+###
+
+GET http://localhost:2007/posts
+
+###
+
+GET  http://localhost:2007/posts/2
+
+###
+
+POST http://localhost:2007/setPost
+Content-Type: application/json
+
+{
+    "titulo": "Reunião de alinhamento ",
+    "conteudo": "Reuniao as 12:00, foi top em",
+    "data_postagem": "2/12/2024",
+    "id_user": 2
+}
+
+###
+
+PUT http://localhost:2007/editPost/2
+Content-Type : application/json
+
+
+{
+    "titulo": "Engaje one year ",
+    "conteudo": "Final do ano chegando, bora pra cima, me sinto muito feliz por todo esforço e trabalho duro",
+    "data_postagem": "2/01/2024",
+    "editByTitle": "Engaje one year "
+}
+###
+
+POST http://localhost:2007/deletePost/1
+Content-Type: application/json
+
+{
+    "titulo": "Reunião de alinhamento"
+}
