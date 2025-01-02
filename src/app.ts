@@ -191,8 +191,8 @@ app.post('/deletePost/:id', async (req: Request, res: Response): Promise<any> =>
     }
 })
 
-const portEnv = process.env.PORT !== undefined ? parseInt(process.env.PORT) : 2007;
+const portEnv = process.env.PORT !== undefined ? process.env.PORT : 2007;
 
-app.listen(portEnv, '0.0.0.0', () => {
+app.listen(portEnv, () => {
     console.log(`Server is running on port ${portEnv}`);
 });
