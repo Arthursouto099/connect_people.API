@@ -8,6 +8,7 @@ import { UserController } from './controllers/UserController'
 import cors from 'cors'
 import { PostController } from './controllers/PostController'
 import { Post } from './models/Post'
+import { sql } from './DataBase'
 
 
 
