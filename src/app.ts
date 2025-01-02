@@ -13,7 +13,7 @@ import 'dotenv/config'
 
 
 const app = express()
-const portEnv = process.env.PORT || 2007
+const portEnv = process.env.PORT || 80
 
 
 
