@@ -8,12 +8,12 @@ import { UserController } from './controllers/UserController'
 import cors from 'cors'
 import { PostController } from './controllers/PostController'
 import { Post } from './models/Post'
-import { sql } from './DataBase'
+import 'dotenv/config'
 
 
 
 const app = express()
-
+const portEnv = process.env.PORT || 2007
 
 
 
@@ -191,7 +191,7 @@ app.post('/deletePost/:id', async (req: Request, res: Response): Promise<any> =>
     }
 })
 
-const portEnv = process.env.PORT !== undefined ? process.env.PORT : 2007;
+
 
 app.listen(portEnv, () => {
     console.log(`Server is running on port ${portEnv}`);
