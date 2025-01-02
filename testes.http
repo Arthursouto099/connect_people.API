@@ -1,4 +1,4 @@
-GET http://localhost:2007
+GET https://connect-people-api.onrender.com/
 
 ###
 POST http://localhost:2007/insert

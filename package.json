@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node --env-file=.env --import=tsx --watch   ./src/app.ts ",
-    "start": "npx ts-node-dev  ./src/app.ts"
+    "start": "npx ts-node  ./src/app.ts"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +22,7 @@
     "express": "^4.21.2",
     "helmet": "^8.0.0",
     "postgres": "^3.4.5",
+    "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
