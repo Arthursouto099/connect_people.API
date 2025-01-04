@@ -195,5 +195,5 @@ app.delete('/deletePost/:id', async (req: Request, res: Response): Promise<any> 
 
 
 app.listen(portEnv,  () => {
-    console.log(`Server is running on port ${portEnv}`);
+    console.log(`Server is running on port ${portEnv}`)
 });
