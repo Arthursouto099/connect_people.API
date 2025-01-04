@@ -42,7 +42,7 @@ DELETE http://localhost:2007/delete/4
 
 ###
 
-GET http://localhost:2007/posts
+GET http://localhost:4000/posts
 
 ###
 
