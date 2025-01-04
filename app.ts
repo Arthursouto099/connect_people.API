@@ -181,11 +181,10 @@ app.put('/editPost/:id', async (req: Request, res: Response): Promise<any> => {
     }
 })
 
-app.post('/deletePost/:id', async (req: Request, res: Response): Promise<any> => {
+app.delete('/deletePost/:id', async (req: Request, res: Response): Promise<any> => {
     try {
         const id = req.params.id
-        const {titulo} = await req.body
-        await PostController.deletePost(parseInt(id), titulo)
+        await PostController.deletePost(parseInt(id))
         return res.status(200).json({message: 'Post deletado com sucesso'})
     }
     catch (error: any) {

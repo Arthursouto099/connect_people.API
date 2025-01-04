@@ -21,7 +21,7 @@ export class PostController {
         const result = await sql`update postagem set titulo = ${post.titulo}, conteudo = ${post.conteudo}, data_postagem = ${post.data_postagem} where id_user = ${idUser} and titulo = ${editByTitle}`
     }
 
-    static async deletePost(idUser: number,deleteByTitle: string ): Promise<void> {
-        const result = await sql`delete from postagem where id_user = ${idUser} and titulo = ${deleteByTitle}`
+    static async deletePost(id: number): Promise<void> {
+        const result = await sql`delete from postagem where id = ${id}`
     }
 }
