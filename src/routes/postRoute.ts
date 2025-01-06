@@ -40,13 +40,13 @@ postRouter.post('/setPost', async(req: Request<Post>, res: Response): Promise<an
 postRouter.put('/editPost/:id', async (req: Request, res: Response): Promise<any> => {
     try {
         const id = req.params.id
-        const {titulo, conteudo, data_postagem, editByTitle} = await req.body
+        const {titulo, conteudo, data_postagem} = await req.body
         const postEdited = {
             titulo,
             conteudo,
             data_postagem
         }
-        await PostController.putPost(parseInt(id), postEdited, editByTitle)
+        await PostController.putPost(parseInt(id), postEdited)
         return res.status(200).json({message: 'Post editado com sucesso'})
 
         

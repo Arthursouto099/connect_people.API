@@ -62,15 +62,14 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:2007/editPost/2
+PUT http://localhost:4000/posts/editPost/2
 Content-Type : application/json
 
 
 {
     "titulo": "Engaje one year ",
     "conteudo": "Final do ano chegando, bora pra cima, me sinto muito feliz por todo esforço e trabalho duro",
-    "data_postagem": "2/01/2024",
-    "editByTitle": "Engaje one year "
+    "data_postagem": "2/01/2024"
 }
 ###
 

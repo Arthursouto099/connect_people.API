@@ -17,8 +17,8 @@ export class PostController {
         const result = await sql`insert into postagem (titulo, conteudo, data_postagem, id_user ) values (${post.titulo}, ${post.conteudo}, ${post.data_postagem}, ${post.id_user} )`
     }
 
-    static async putPost(idUser: number, post: {titulo: string, conteudo: string, data_postagem: string}, editByTitle: string): Promise<void> {
-        const result = await sql`update postagem set titulo = ${post.titulo}, conteudo = ${post.conteudo}, data_postagem = ${post.data_postagem} where id_user = ${idUser} and titulo = ${editByTitle}`
+    static async putPost(id: number, post: {titulo: string, conteudo: string, data_postagem: string}): Promise<void> {
+        const result = await sql`update postagem set titulo = ${post.titulo}, conteudo = ${post.conteudo}, data_postagem = ${post.data_postagem} where id = ${id}`
     }
 
     static async deletePost(id: number): Promise<void> {
