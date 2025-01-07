@@ -76,3 +76,16 @@ Content-Type : application/json
 DELETE  https://connect-people-api.onrender.com/deletePost/1
 
 
+###
+
+GET http://localhost:4000/coments/
+
+###
+
+POST http://localhost:4000/coments/insertComent
+Content-Type: application/json 
+
+{
+    "comentario": "olá amigooo",
+    "id_post" : 20
+}
