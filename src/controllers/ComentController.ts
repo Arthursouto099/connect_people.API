@@ -15,7 +15,7 @@ export class ComentController {
     }
 
     static async postComent(coment: Coment): Promise<void> {
-        const result = await sql`insert into comentario (comentario, id_post, id_user) values (${[coment.comentario]}, ${coment.id_post}, ${coment.id_user} )`
+        const result = await sql`insert into comentario (comentario, id_post, id_user, user_name) values (${[coment.comentario]}, ${coment.id_post}, ${coment.id_user}, ${coment.user_name} )`
     }
     
 
