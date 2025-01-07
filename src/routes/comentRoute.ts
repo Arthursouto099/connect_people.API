@@ -34,8 +34,8 @@ catch(error: any) {
 comentRouter.post('/insertComent', async (req: Request<Coment>, res: Response): Promise<any> => {
 
     try {
-        const {comentario, id_post} = req.body
-        const coment = new Coment(comentario, id_post)
+        const {comentario, id_post, id_user} = req.body
+        const coment = new Coment(comentario, id_post, id_user)
         await ComentController.postComent(coment)
         return res.status(201).json({message: 'Comentario criado com sucesso'})
     }
