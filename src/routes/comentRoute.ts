@@ -60,6 +60,17 @@ comentRouter.delete('/deleteComent/:id', async (req: Request, res: Response): Pr
     
 })
 
+comentRouter.delete('/deleteAllComents/:id',  async(req: Request, res: Response): Promise<any> => {
+    try {
+        const id_post = req.params.id
+        await ComentController.deleteComentByIdPost(Number(id_post))
+        return res.status(200).json({message: 'Comentarios deletados com sucesso'})    
+    }
+    catch(error: any) {
+        return res.status(500).json({error})
+    }
+})
+
 
 
 

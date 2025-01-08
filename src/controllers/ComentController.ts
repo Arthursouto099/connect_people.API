@@ -22,4 +22,8 @@ export class ComentController {
     static async deleteComent(id: number): Promise<void> {
         const result = await sql`delete from comentario where id = ${id}`
     }
+
+    static async deleteComentByIdPost(id_post: number): Promise<void> {
+        const result = await sql`delete from comentario where id_post = ${id_post}`
+    }
 }
